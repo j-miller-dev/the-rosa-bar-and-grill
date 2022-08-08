@@ -1,0 +1,77 @@
+// NOTE: Focus on delivering a mobile-first experience then include other devices later.
+// HERO Section
+.hero {
+  @include devices(mobile) {
+    background-image: url(assets/images/hero-background.jpeg);
+    height: 100vh;
+    text-align: center;
+
+    background-position: center;
+  }
+
+  @media only screen and (min-width: 520px) {
+    background-position-y: -5rem;
+  }
+
+  @include devices(tablet) {
+    background-image: url(../../assets/images/homepage/hero-bg-tablet@2x.jpg);
+  }
+
+  @include devices(desktop) {
+    background-image: url(/src/assets/images/AdobeStock_233547056.jpeg);
+  }
+
+  &__container {
+    @include devices(tablet) {
+      padding: 4rem;
+      padding-top: 2rem;
+    }
+    @include devices(desktop) {
+      max-width: 32.3rem;
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    line-height: 2.9rem;
+    margin-top: 2.5rem;
+
+    @include devices(tablet) {
+      margin-top: 1.5rem;
+    }
+
+    @include devices(desktop) {
+      margin-top: 8.3rem;
+      font-size: 3.8rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  &__text {
+    margin-top: 2.5rem;
+
+    @include devices(tablet) {
+      margin-top: 1.5rem;
+    }
+
+    @include devices(desktop) {
+      margin-top: 1.5rem;
+      max-width: 25.5rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  &__button {
+    margin-top: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    @include devices(desktop) {
+      font-size: 1.2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-top: 1.5rem;
+    }
+  }
+}

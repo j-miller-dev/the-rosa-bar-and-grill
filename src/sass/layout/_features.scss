@@ -1,0 +1,216 @@
+// Features Section
+.features {
+  text-align: center;
+  background-repeat: no-repeat;
+
+  @include devices(tablet) {
+    background-image: url(/images/patterns/pattern-curve-top-right.svg),
+      url(/images/patterns/pattern-curve-top-left.svg);
+    background-position-y: 8rem, bottom;
+    // background-position-x: -30rem, 25rem;
+  }
+
+  @include devices(desktop) {
+    background-image: url(/images/patterns/pattern-curve-top-right.svg),
+      url(/images/patterns/pattern-curve-top-left.svg);
+    background-position-y: 14.2rem, bottom;
+    background-position-x: left, right;
+  }
+
+  &__container {
+    padding: 0 2.4rem 0.5rem;
+    margin-bottom: -5rem;
+    margin-top: 10rem;
+    transform: translateY(-7.2rem);
+
+    // @media (min-width: 520px) and (max-width: 700px) {
+    //   margin-top: 1rem;
+    // }
+
+    @include devices(tablet) {
+      padding: 6rem;
+      margin-top: 4rem;
+      transform: translateY(-5.2rem);
+      padding-bottom: 0;
+      @include flex(column, center);
+    }
+
+    @include devices(desktop) {
+      max-width: 111rem;
+      margin: 0 auto;
+      padding: 4rem;
+      transform: translateY(-2.2rem);
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    color: $primary-cod;
+    margin-top: 0rem;
+    line-height: 3rem;
+    font-weight: 600;
+  }
+
+  &__text {
+    color: $primary-cod;
+    font-weight: 100;
+    margin-top: 1rem;
+    line-height: 1.7rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  &__enjoyable {
+    margin-bottom: 0.8rem;
+
+    @include devices(desktop) {
+      @include flex(row, space-around);
+      // margin-bottom: -2.9rem;
+      // margin-bottom: 6rem;
+    }
+  }
+
+  &__locally {
+    position: relative;
+    transform: translateY(-4rem);
+    @include devices(tablet) {
+      // margin-top: 20rem;
+    }
+    @include devices(desktop) {
+      @include flex(row-reverse, space-around);
+      transform: translateY(-15rem);
+      margin-bottom: -6rem;
+    }
+
+    .features-floating--lines {
+      @include devices(desktop) {
+        display: block;
+        right: 0;
+        top: 36rem;
+        transform: translateX(8.4rem);
+      }
+    }
+  }
+  &__card {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include devices(tablet) {
+      width: 35rem;
+      height: 25rem;
+    }
+
+    @include devices(desktop) {
+      max-width: 32rem;
+      height: 42rem;
+    }
+  }
+
+  &__image-enjoyable {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 32.3rem;
+    // transform: translateY(-7.2rem);
+    background-image: url(/images/homepage/enjoyable-place-mobile.jpg);
+    @include devices(tablet) {
+      background-image: url(/images/homepage/enjoyable-place-tablet.jpg);
+      min-height: 100%;
+      width: 100%;
+    }
+
+    @include devices(desktop) {
+      height: 100%;
+      width: 100%;
+      background-image: url(../../assets/images/homepage/enjoyable-place-desktop@2x.jpg);
+    }
+  }
+
+  &__image-locally {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 32.3rem;
+
+    background-image: url(../../assets/images/homepage/locally-sourced-mobile@2x.jpg);
+
+    @include devices(tablet) {
+      background-image: url(/images/homepage/locally-sourced-tablet.jpg);
+      min-height: 100%;
+      width: 100%;
+    }
+
+    @include devices(desktop) {
+      height: 100%;
+      width: 100%;
+      background-image: url(../../assets/images/homepage/locally-sourced-desktop@2x.jpg);
+    }
+  }
+}
+
+.card-one {
+  transform: translateY(-7.2rem);
+
+  @include devices(desktop) {
+    transform: translateY(-7rem);
+  }
+}
+
+.card-two {
+  @include devices(desktop) {
+    transform: translateY(15rem);
+  }
+}
+
+.features__content {
+  margin-top: 4.8rem;
+
+  @include devices(tablet) {
+    max-width: 30rem;
+    width: 100%;
+    // Fix this later
+    margin-left: 2.5rem;
+
+    @include flex(column, center);
+  }
+
+  @include devices(desktop) {
+    text-align: left;
+    max-width: 25.5rem;
+    margin: 0;
+  }
+
+  &-pattern {
+    margin-bottom: 2rem;
+  }
+
+  .featured__title {
+    margin-bottom: 1.6rem;
+
+    @include devices(desktop) {
+      margin-top: 4.8rem;
+    }
+  }
+}
+
+.content-one {
+  @include devices(mobile) {
+    transform: translateY(-8rem);
+  }
+
+  @include devices(tablet) {
+    transform: translateY(-8rem);
+    // margin-top: 13rem;
+  }
+
+  @include devices(desktop) {
+    transform: translateY(-4rem);
+  }
+}
+
+.content-two {
+  @include devices(desktop) {
+    transform: translateY(15rem);
+  }
+}

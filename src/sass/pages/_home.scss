@@ -1,0 +1,12 @@
+body {
+  @include devices(tablet) {
+  }
+
+  @include devices(mobile) {
+  }
+
+  @include devices(desktop-large) {
+  }
+  @include devices(desktop-extra-large) {
+  }
+}
