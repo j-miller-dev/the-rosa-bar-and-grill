@@ -17,20 +17,20 @@
 
   &:hover,
   &:active {
-    color: $primary-cod;
+    color: $black;
     background-color: $white;
   }
 }
 
 // Button Dark
 .button--dark {
-  background-color: $primary-cod;
+  background-color: black;
   color: $white;
   border: 1px solid $white;
 
   &:hover {
-    color: $primary-cod;
+    color: black;
     background: $white;
-    border: 1px solid $secondary-ebony;
+    border: 1px solid goldenrod;
   }
 }
